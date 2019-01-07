@@ -28,6 +28,6 @@
     "eva-icons": "^1.1.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-lazyload": "^2.3.0"
+    "react-lazy-load-image-component": "^1.2.1"
   }
 }

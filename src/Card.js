@@ -1,15 +1,21 @@
 import React from "react";
-import LazyLoad from "react-lazyload";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 class Card extends React.Component {
   render() {
     const { name, image } = this.props;
     return (
-      <LazyLoad height={50}>
-        <div className="card">
-          <img className="card-image" src={image} alt={name} />
-        </div>
-      </LazyLoad>
+      <div className="card">
+        <LazyLoadImage
+          width={240}
+          height={330}
+          src={image}
+          alt={name}
+          effect="blur"
+        >
+        </LazyLoadImage>
+      </div>
     );
   }
 }

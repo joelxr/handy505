@@ -1,0 +1,33 @@
+{
+  "name": "handy505",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "parcel src/index.html"
+  },
+  "author": "Joel Xavier Rocha <joelxr@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.12.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.15.3",
+    "sass": "^1.15.3"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "eva-icons": "^1.1.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-lazyload": "^2.3.0"
+  }
+}

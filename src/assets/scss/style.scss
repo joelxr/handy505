@@ -6,12 +6,18 @@
 body {
   font-family: $retro-font;
   background-color: $bg-color;
+  margin: 0;
 }
 
 .pagination {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: darken($bg-color, 22%);
+  z-index: 2;
   display: flex;
   justify-content: center;
-  margin: 12px 20px;
+  padding: 8px 12px;
 }
 
 .cards {

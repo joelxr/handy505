@@ -1,8 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import API from "./api";
-import Card from "./Card";
+import { Provider } from "./Context";
+import { Router, Link } from "@reach/router";
+import Menu from "./Menu";
+import Cards from "./Cards";
+import CardDetail from "./CardDdetail";
 
+import "../node_modules/nes.css/scss/nes.scss";
 import "./assets/scss/style.scss";
 
 class App extends React.Component {
@@ -11,7 +16,12 @@ class App extends React.Component {
 
     this.state = {
       page: 1,
-      cards: []
+      cards: [],
+      cardName: "",
+      handleCardNameChange: this.handleCardNameChange,
+      handlePrevPage: this.handlePrevPage,
+      handleNextPage: this.handleNextPage,
+      loadCards: this.loadCards
     };
   }
 
@@ -42,36 +52,18 @@ class App extends React.Component {
     this.setState({ page: currentPage + 1 }, this.loadCards);
   };
 
+  handleCardNameChange = event => {};
+
   render() {
     return (
       <div>
-        <div className="pagination">
-          {this.state.page > 1 && (
-            <button
-              type="button"
-              id="prevPageBtn"
-              className="btn is-primary"
-              onClick={this.handlePrevPage}
-            >
-              Previous
-            </button>
-          )}
-          <button
-            type="button"
-            id="nextPageBtn"
-            className="btn is-primary"
-            onClick={this.handleNextPage}
-          >
-            Next
-          </button>
-        </div>
-        <div className="cards">
-          {this.state.cards.map(card => {
-            return (
-              <Card key={card.id} image={card.imageUrl} name={card.name} />
-            );
-          })}
-        </div>
+        <Provider value={this.state}>
+          <Menu />
+          <Router>
+            <Cards path="/" />
+            <CardDetail path="/detail/:id" />
+          </Router>
+        </Provider>
       </div>
     );
   }

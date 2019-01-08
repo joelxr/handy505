@@ -13,9 +13,19 @@ body {
   top: 0;
   width: 100%;
   background-color: darken($bg-color, 22%);
-  z-index: 2;
-  display: flex;
+  z-index: 3;
   padding: 8px 12px;
+}
+
+.search {
+  position: sticky;
+  top: 40px;
+  width: 100%;
+  background-color: darken($bg-color, 22%);
+  z-index: 3;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
 .separator {
@@ -23,19 +33,65 @@ body {
 }
 
 .search-box {
-  flex: 2 1 auto;
+  flex: 3 1 auto;
 }
 
 .pagination {
-  flex: 0 0 auto;
+  flex: 0 2 auto;
 }
 
 .cards {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  padding: 2px;
 }
 
 .card {
+  margin: 5px;
+}
+
+.nes-container {
+  margin: 12px;
+}
+
+.card-detail {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding: 8px;
   margin: 8px;
+}
+
+.card-info {
+  flex: 1 1 auto;
+  margin: 12px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.card-cover {
+  flex: 3 1 auto;
+  align-content: center;
+  margin: 12px
+}
+
+
+.attack-cost {
+}
+
+.attack-name {
+  font-weight: bold;
+}
+
+.attack-damage {
+  color: red;
+}
+
+.attack-text {
+
+}
+
+td, th {
+  padding: 8px;
 }

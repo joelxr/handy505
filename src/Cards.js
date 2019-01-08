@@ -14,6 +14,7 @@ class Cards extends React.Component {
                   type="text"
                   className="nes-input"
                   placeholder="Search..."
+                  onChange={context.handleCardNameChange}
                 />
               </div>
               <div className="pagination">

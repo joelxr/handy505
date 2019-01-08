@@ -37,6 +37,15 @@ class App extends React.Component {
     });
   }
 
+  findCardByName(name) {
+    API.get("/cards", { params: { name } }).then(res => {
+      console.log(res)
+      this.setState({
+        cards: res.data.cards
+      });
+    })
+  }
+
   handlePrevPage = event => {
     const currentPage = this.state.page;
     this.setState(
@@ -52,7 +61,11 @@ class App extends React.Component {
     this.setState({ page: currentPage + 1 }, this.loadCards);
   };
 
-  handleCardNameChange = event => {};
+  handleCardNameChange = event => {
+    console.log(event.target.value)
+    const name = event.target.value
+    this.findCardByName(name)
+  };
 
   render() {
     return (

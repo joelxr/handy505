@@ -13,7 +13,6 @@ To manually deploy it follow the instructions:
 ```
 npm install
 npm run build
-
 ```
 
 Or, to development mode:
@@ -25,7 +24,7 @@ npm run serve
 ## About this project
 
 ### Motivation
-So, I decided to start studying React and I took Brian Holt's classes at FrontendMasters (Complete Intro to React v4) and Brian did a pet adoption app on his course.
+So, I decided to start studying React and I took Brian Holt's classes at [FrontendMasters](https://frontendmasters.com/) ([Complete Intro to React v4](https://frontendmasters.com/courses/complete-react-v4/)) and Brian did a pet adoption app on his course.
 Based on it, I created Handy505, to exercise and go further with what I learned.
 
 ### The "Bricks"

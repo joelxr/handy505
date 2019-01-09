@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "parcel src/index.html"
+    "serve": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
   },
   "author": "Joel Xavier Rocha <joelxr@gmail.com>",
   "license": "ISC",

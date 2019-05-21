@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/743e5c07-40dd-4b18-a5ff-57aeb38dbc81/deploy-status)](https://app.netlify.com/sites/practical-bardeen-9293fa/deploys)
+
 # HANDY.505
 
 Handy.505 is a Pokémon Trading Card Games catalogue.
